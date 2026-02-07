@@ -1,0 +1,52 @@
+@import '@/assets/styles/abstracts/index';
+
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+  position: relative;
+  z-index: 1;
+  @include breakpoint($lg) {
+    margin-bottom: rem(96);
+    justify-content: start!important;
+  }
+
+  .item {
+    color: $gray-text;
+    font-size: rem(14);
+    font-style: normal;
+    font-weight: 500;
+    line-height: rem(20);
+    margin-right: rem(8);
+    display: flex;
+    align-items: center;
+    //@include ellipsis(2);
+    span {
+      -webkit-line-clamp: 1;
+      display: -webkit-box;
+      overflow: hidden;
+      //margin-top: rem(5);
+      -webkit-box-orient: vertical;
+    }
+
+    .icon {
+      margin-right: rem(8);
+      flex-shrink: 0;
+    }
+  }
+
+  .active {
+    color: $blue !important;
+    font-size: rem(14);
+    font-style: normal;
+    font-weight: 700;
+    line-height: rem(20);
+    pointer-events: none;
+  }
+  .breadcrumbName{
+    color: $blue;
+    font-weight: 700;
+    line-height: 1.25rem;
+  }
+}

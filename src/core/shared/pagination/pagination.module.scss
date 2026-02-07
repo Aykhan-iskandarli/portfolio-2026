@@ -1,0 +1,68 @@
+@import '@/assets/styles/abstracts/index.scss';
+
+.pagination {
+  display: flex;
+  border-radius: rem(100);
+  border: 1px solid $gray-200;
+  padding: rem(10);
+
+  .item {
+
+    text-align: center;
+    margin-left: rem(8);
+    margin-right: rem(8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      display: block;
+      width: rem(36);
+      height: rem(32);
+      font-size: rem(15);
+      line-height: rem(20);
+      font-weight: 500;
+      cursor: pointer;
+      padding: rem(6) rem(12);
+      color: $gray-800;
+      transition: all 0.3s ease;
+
+
+    }
+    &:hover {
+     a {
+         color: $modern-blue-500;
+     }
+    }
+  }
+
+  .itemActive {
+
+    a {
+      font-weight: 700;
+      background: $blue-100;
+      color: $modern-blue-500;
+      border-radius: rem(100);
+    }
+  }
+
+  .next,
+  .prev {
+    cursor: pointer;
+    width: rem(36);
+    height: rem(36);
+    background: $modern-blue-500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: rem(100);
+    color: white;
+  }
+
+  .breakItem {
+    margin-top: rem(5);
+    font-size: rem(14);
+    line-height: rem(21);
+    padding: rem(4) rem(12);
+  }
+}
+

@@ -1,0 +1,53 @@
+@import '@/assets/styles/abstracts/index.scss';
+
+.button {
+  border-radius: $border-sm-2;
+  padding: rem(16) rem(32);
+  font-weight: 500;
+  outline: none;
+  border: none;
+  font-family: $font;
+  font-size: rem(16);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint($md) {
+    border-radius: $border-sm;
+  }
+  &_primary {
+    color: $white;
+    background-color: $main;
+    transition: background-color 0.3s;
+    &:hover {
+      background: var(--Modern-blue-600, #0043CE);    }
+  }
+
+  &_secondary {
+    color: $main;
+    background-color: $white;
+  }
+  &_gray {
+    color: $white;
+    background-color: $gray;
+    border-radius: 48px;
+
+
+
+  }
+  &_dark {
+    color: $white;
+    background-color: $gray;
+    border-radius: 12px;
+    border: 1px solid var(--Gray-700, #364152);
+    background: var(--Transparent-Gray-Gray-40, rgba(32, 41, 57, 0.40));
+
+
+  }
+  &_info {
+    background-color: rgba(255, 255, 255, 0.20);
+    color: $white;
+    backdrop-filter: blur(10px);
+    border-radius: 100px;
+  }
+}

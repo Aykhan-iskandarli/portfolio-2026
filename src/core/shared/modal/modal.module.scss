@@ -1,0 +1,45 @@
+@import '@/assets/styles/abstracts/index.scss';
+
+.modal {
+  :global(.ant-modal-content) {
+    background: none;
+  }
+}
+.ant-modal .ant-modal-content {
+  background: var(--base-bg-light, radial-gradient(100% 100% at 50% 0%, #D0E2FF 0%, #FFF 80%));
+}
+.title {
+
+}
+
+.cancel {
+}
+
+.content {
+
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.btnOk {
+  width: 80%;
+  border-radius: rem(41);
+  padding: rem(15);
+  background-color: $white;
+  cursor: pointer;
+}
+
+.modalIcon {
+  cursor: pointer;
+display: flex;
+justify-content: right;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+   // top: rem(-50);
+}

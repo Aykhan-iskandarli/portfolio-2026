@@ -1,0 +1,21 @@
+@import '@/assets/styles/abstracts/index.scss';
+
+
+.title {
+  font-size: rem(18);
+  font-weight: 500;
+  color: $white;
+  margin-bottom: rem(6);
+}
+
+.text {
+  font-size: rem(16);
+  color: $gray-text;
+}
+
+.item {
+  margin-bottom: rem(30);
+  &:last-of-type {
+    margin-bottom: rem(16);
+  }
+}

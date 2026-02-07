@@ -1,0 +1,22 @@
+@import '@/assets/styles/abstracts/index.scss';
+
+.social {
+  display: flex;
+
+  &_item {
+    margin-right: rem(24);
+
+    img {
+      position: relative !important;
+      object-fit: contain !important;
+    }
+    @include breakpoint($lg) {
+      margin: 0 20px;
+    }
+  }
+
+  @include breakpoint($lg) {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}

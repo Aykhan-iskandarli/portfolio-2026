@@ -1,0 +1,11 @@
+@import '@/assets/styles/abstracts/index.scss';
+
+.item {
+  margin-top: rem(15);
+  padding: rem(8) rem(12);
+  background-color: $common-text-color;
+  border-radius: rem(100);
+  color: $gray-200;
+  display: inline-block;
+  margin-right: rem(8);
+}

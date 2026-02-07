@@ -1,0 +1,154 @@
+@import '@/assets/styles/abstracts/index';
+
+.title {
+  font-size: rem(40);
+  font-weight: 700;
+  display: inline-block;
+  @include breakpoint($lg) {
+    font-size: 24px;
+  }
+
+  &_white {
+    color: $white;
+  }
+
+  &_mobile {
+    @include breakpoint($lg) {
+      display: block;
+      //text-align: center;
+      font-size: rem(30);
+    }
+  }
+
+  @include breakpoint($lg) {
+    font-size: rem(30);
+  }
+}
+
+.desc {
+  text-align: right;
+  overflow: hidden;
+
+
+  svg {
+    display: none;
+  }
+
+  &_content {
+    font-size: rem(18);
+    background: radial-gradient(278.27% 278.27% at -178.27% 100%, #111 0%, #A5A5A5 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+     @include breakpoint($xl) {
+      display: flex;
+    }
+  }
+
+  &_lined {
+  font-size: rem(22);
+  background: radial-gradient(50% 50% at 50% 59.37%, #090909 0%, #616161 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block; 
+  max-width: rem(400); 
+    @include breakpoint($lg) {
+      font-size: 14px;
+    }
+    //     @include breakpoint($xl) {
+    //   font-size: 20px !important;
+    //   max-width: rem(480);
+    // }
+    // @include breakpoint($sm) {
+    //     max-width: rem(450); 
+    //     margin-left: 25%;
+    // }
+    //   @include breakpoint($md) {
+    //        font-size: 18px !important;
+    //       margin-left: 15%;
+    // }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: rem(140);
+      height: 1px;
+      background-color: #444;
+      position: absolute;
+      top: 50%;
+      right: calc(100% + #{rem(24)});
+      @include breakpoint($lg) {
+        width: rem(100);
+      }
+      //   @include breakpoint($sm) {
+      //   width: rem(100);
+      // }
+    }
+
+    &_white {
+      background: radial-gradient(56.96% 56.96% at 50% 59.38%, #FFF 47%, #697586 100%);
+      background-clip: text;
+
+      &::before {
+        background-color: $common-text-color;
+      }
+    }
+
+
+  }
+
+  &_mobile {
+    &_link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      svg {
+        display: initial;
+      }
+
+      @include breakpoint($lg) {
+        .desc_content {
+          position: relative;
+          display: inline-block;
+
+          &::before {
+            content: "";
+            display: inline-block;
+            width: rem(60);
+            height: 1px;
+            background-color: #444;
+            position: absolute;
+            top: 50%;
+            right: calc(100% + #{rem(24)});
+          }
+        }
+      }
+    }
+  }
+}
+
+.margin {
+  margin-bottom: rem(65);
+  @include breakpoint($lg) {
+    margin-bottom: rem(30);
+  }
+}
+
+.small {
+  .title {
+    font-size: rem(28);
+  }
+
+  .desc_content, .desc_lined {
+    font-size: rem(16);
+
+  }
+}
+
+.noSpacing {
+  margin-bottom: rem(65);
+  @include breakpoint($lg) {
+    margin-bottom: rem(32);
+  }
+}

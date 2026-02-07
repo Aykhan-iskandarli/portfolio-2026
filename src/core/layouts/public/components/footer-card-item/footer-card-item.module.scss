@@ -1,0 +1,83 @@
+@import '@/assets/styles/abstracts/index.scss';
+
+.card {
+  border-radius: $border;
+  background-color: $dark-blue;
+  padding: rem(24);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  border: 1px solid $dark-blue;
+  @include transition();
+  user-select: none;
+
+  &::before {
+    @extend %bg-cover;
+    background-image: url('../../../../../assets/images/bg/noise-bg.png');
+    background-repeat: repeat;
+  }
+
+  &::after {
+    opacity: 0;
+    @extend %bg-cover;
+    background: radial-gradient(40.45% 40.45% at 50% 46.16%, #061070 3.13%, rgba(14, 17, 32, 0.00) 100%);
+    filter: blur(61px);
+    @include transition();
+
+  }
+
+  &:hover {
+    border: 1px solid $blue-line;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(20);
+  position: relative;
+  height: 100%;
+  width:100%;
+}
+
+.image {
+  width: rem(80) !important;
+  height: rem(80) !important;
+  flex-shrink:0;
+  img {
+    object-fit: contain !important;
+    position: relative !important;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+
+.title {
+  color: $light-gray;
+  font-size: rem(16);
+  font-weight: 600;
+  margin-left: rem(12);
+}
+
+.link {
+  padding: rem(10) rem(12);
+  background-color: $common-text-color;
+  border-radius: $border-sm;
+  color: $gray-200;
+  font-size: rem(14);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

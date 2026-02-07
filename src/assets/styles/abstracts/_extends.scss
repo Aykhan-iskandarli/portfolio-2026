@@ -1,0 +1,26 @@
+@use "./variables" as *;
+@use "./functions" as *;
+@use "./mixins" as *;
+%card {
+  background-color: $white;
+  padding: rem(120) 0;
+  border-radius: $border-xl;
+  position: relative;
+  overflow: hidden;
+  @include breakpoint($lg) {
+    border-radius: $border-l;
+    padding: rem(80) 0;
+  }
+}
+
+%bg-cover {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}

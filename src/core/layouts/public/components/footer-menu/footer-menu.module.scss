@@ -1,0 +1,26 @@
+@import '@/assets/styles/abstracts/index.scss';
+
+.menu {
+  display: flex;
+  @include breakpoint($md) {
+    display: block;
+    ul:first-of-type {
+      margin-bottom: rem(32);
+    }
+  }
+}
+
+.link {
+  font-size: rem(16);
+  font-weight: 500;
+  color: $white;
+}
+
+.item {
+  margin-bottom: rem(32);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+

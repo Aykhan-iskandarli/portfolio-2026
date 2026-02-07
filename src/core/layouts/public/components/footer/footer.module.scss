@@ -1,0 +1,145 @@
+@import '@/assets/styles/abstracts/index.scss';
+
+.footer {
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    @extend %bg-cover;
+    background-image: url("../../../../../assets/images/bg/footer-bg-left.png");
+  }
+
+  &::after {
+    @extend %bg-cover;
+    background-image: url("../../../../../assets/images/bg/footer-bg-right.png");
+    background-position: bottom right;
+  }
+
+  @include breakpoint($lg) {
+    background: rgba(18, 25, 38, 0.40);
+    &::before, &::after {
+      content: none;
+    }
+  }
+}
+
+.upper {
+  padding: rem(120) 0;
+  background-image: url("../../../../../assets/images/bg/footer-upper-bg.png");
+  background-repeat: no-repeat;
+}
+
+.lower {
+  padding-top: rem(120);
+  border-radius: $border-xl;
+  background-color: rgba(255, 255, 255, 0.03);
+  background-image: url("../../../../../assets/images/bg/noise-bg.png");
+  background-repeat: repeat;
+  //margin-bottom: rem(24);
+  @include breakpoint($lg) {
+    padding-top: rem(40);
+    border-radius: $border-l;
+    border-top: 1px solid $gray-700;
+  }
+}
+
+.heading {
+  font-size: rem(40);
+  font-weight: 700;
+  color: $white;
+  margin-bottom: rem(70);
+  @include breakpoint($lg) {
+    font-size: 24px;
+  }
+}
+
+.content {
+  padding: rem(70) 0;
+  border: solid $dark-text;
+  border-width: 1px 0;
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint($lg) {
+    & > div {
+      &:first-of-type {
+        width: 40%;
+      }
+
+      &:nth-of-type(2) {
+        width: 60%;
+      }
+    }
+  }
+}
+
+.copyright {
+  color: $gray-text;
+  font-size: rem(15);
+  @include breakpoint($lg) {
+    text-align: center;
+  }
+}
+
+.author {
+  color: $gray-text;
+  font-size: rem(15);
+  text-align: right;
+}
+
+.arrow {
+  border-radius: $border-sm-2;
+  background-color: $common-text-color;
+  //backdrop-filter: blur(1px);
+  padding: rem(9);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $white;
+  @include transition();
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid transparent;
+
+  &::before {
+    @extend %bg-cover;
+    background-image: url("../../../../../assets/images/bg/footer-chevron-bg.png");
+    opacity: 0;
+    @include transition();
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    border-color: #0043CE;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:first-of-type {
+    margin-right: rem(12);
+  }
+}
+
+
+.slider {
+  height: 100%;
+
+  &_item {
+    padding: 20px;
+    @include breakpoint($lg) {
+      padding: 5px;
+    }
+  }
+  :global(.swiper) {
+    height: 100%;
+  }
+}

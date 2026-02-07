@@ -1,0 +1,34 @@
+@import '@/assets/styles/abstracts/index.scss';
+
+.contacts {
+  max-width: rem(350);
+}
+
+.item {
+  display: flex;
+  margin-bottom: rem(30);
+}
+
+.text {
+  font-size: rem(18);
+  font-weight: 500;
+  color: $white;
+}
+
+.icon {
+  margin-right: rem(12);
+  width: rem(22);
+  height: rem(22);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint($md) {
+    display: none;
+  }
+  img {
+    position: relative !important;
+    object-fit: contain;
+  }
+}
+

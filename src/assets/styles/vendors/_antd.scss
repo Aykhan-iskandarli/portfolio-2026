@@ -1,0 +1,11 @@
+.ant-input, .ant-select, .ant-select-selector {
+  height: 52px!important;
+  border-radius: $border-sm-2!important;
+  font-size: 15px!important;
+}
+
+.ant-form-item-has-error {
+  .ant-select-selector {
+    border-color: #ff4d4f!important;
+  }
+}

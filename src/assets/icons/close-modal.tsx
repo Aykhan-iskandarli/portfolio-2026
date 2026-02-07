@@ -1,0 +1,12 @@
+import {IIconProps} from '@/assets/icons/icons';
+
+export const CloseModalIcon = ({className}: IIconProps) => {
+    return (
+        <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <circle cx='16' cy='16' r='16' fill='#D0E2FF'/>
+            <path d='M20 12L12 20M12 12L20 20' stroke='#001141' strokeWidth='2' strokeLinecap='round'
+                  strokeLinejoin='round'/>
+        </svg>
+
+    );
+};
