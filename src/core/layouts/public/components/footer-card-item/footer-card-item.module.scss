@@ -1,4 +1,4 @@
-@import '@/assets/styles/abstracts/index.scss';
+@use "abstracts/index" as *;
 
 .card {
   border-radius: $border;
@@ -42,13 +42,14 @@
   margin-bottom: rem(20);
   position: relative;
   height: 100%;
-  width:100%;
+  width: 100%;
 }
 
 .image {
   width: rem(80) !important;
   height: rem(80) !important;
-  flex-shrink:0;
+  flex-shrink: 0;
+
   img {
     object-fit: contain !important;
     position: relative !important;

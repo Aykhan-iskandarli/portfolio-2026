@@ -1,4 +1,4 @@
-import HeaderMenuItemComponent from '@/core/layouts/public/components/header-menu-item/header-menu-item.component';
+import HeaderMenuItemComponent from '../header-menu-item/header-menu-item.component';
 import css from './header-menu.module.scss';
 import {IMenu} from "@/core/layouts/public/public";
 

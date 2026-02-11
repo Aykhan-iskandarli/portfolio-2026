@@ -1,4 +1,4 @@
-@import '@/assets/styles/abstracts/index.scss';
+@use "abstracts/index" as *;
 
 .footer {
   position: relative;
@@ -17,7 +17,9 @@
 
   @include breakpoint($lg) {
     background: rgba(18, 25, 38, 0.40);
-    &::before, &::after {
+
+    &::before,
+    &::after {
       content: none;
     }
   }
@@ -35,6 +37,7 @@
   background-color: rgba(255, 255, 255, 0.03);
   background-image: url("../../../../../assets/images/bg/noise-bg.png");
   background-repeat: repeat;
+
   //margin-bottom: rem(24);
   @include breakpoint($lg) {
     padding-top: rem(40);
@@ -48,6 +51,7 @@
   font-weight: 700;
   color: $white;
   margin-bottom: rem(70);
+
   @include breakpoint($lg) {
     font-size: 24px;
   }
@@ -61,7 +65,7 @@
   justify-content: space-between;
 
   @include breakpoint($lg) {
-    & > div {
+    &>div {
       &:first-of-type {
         width: 40%;
       }
@@ -76,6 +80,7 @@
 .copyright {
   color: $gray-text;
   font-size: rem(15);
+
   @include breakpoint($lg) {
     text-align: center;
   }
@@ -135,10 +140,12 @@
 
   &_item {
     padding: 20px;
+
     @include breakpoint($lg) {
       padding: 5px;
     }
   }
+
   :global(.swiper) {
     height: 100%;
   }

@@ -1,23 +1,20 @@
-@import '@/assets/styles/abstracts/index.scss';
+@use "abstracts/index" as *;
 
 .modal {
   :global(.ant-modal-content) {
     background: none;
   }
 }
+
 .ant-modal .ant-modal-content {
   background: var(--base-bg-light, radial-gradient(100% 100% at 50% 0%, #D0E2FF 0%, #FFF 80%));
 }
-.title {
 
-}
+.title {}
 
-.cancel {
-}
+.cancel {}
 
-.content {
-
-}
+.content {}
 
 .wrapper {
   display: flex;
@@ -36,10 +33,10 @@
 
 .modalIcon {
   cursor: pointer;
-display: flex;
-justify-content: right;
+  display: flex;
+  justify-content: right;
   position: absolute;
   right: 20px;
   top: 20px;
-   // top: rem(-50);
+  // top: rem(-50);
 }

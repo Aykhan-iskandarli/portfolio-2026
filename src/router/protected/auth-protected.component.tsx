@@ -38,7 +38,7 @@ const AuthProtectedComponent = ({children}: IAuthProtectedRouteProps) => {
             //     break;
             default:
                 // setChildNode(children);
-                // setChildNode(<PublicLayout>{children}</PublicLayout>);
+                setChildNode(<PublicLayout>{children}</PublicLayout>);
                 break;
         }
     }, [children, dispatch, layout]);

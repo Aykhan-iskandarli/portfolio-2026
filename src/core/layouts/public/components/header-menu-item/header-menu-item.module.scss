@@ -1,76 +1,18 @@
-@import '@/assets/styles/abstracts/index.scss';
+@use "abstracts/index" as *;
 
-.item {
-  margin: 0 rem(12);
-}
-
-.sub {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  border-radius: $border-l;
+.menu {
+  border-radius: $border-xl;
   border: 1px solid rgba(255, 255, 255, 0.40);
-  background-color: rgba(11, 16, 26, 0.90);
-  backdrop-filter: blur(16px);
-  padding: rem(16) rem(24);
-  left: 0;
-  top: calc(100% + 8px);
-  width: 100%;
-  background-image: url("../../../../../assets/images/bg/menu-bg.png");
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  @include transition();
-
-  &_text {
-    color: $gray-text;
-    font-size: rem(12);
-    padding: rem(8) 0 rem(8) rem(12);
-    margin-bottom: rem(10);
-
-  }
-}
-
-.col {
-  border-right: 1px solid $common-text-color;
-}
-
-.name {
-  color: rgba(255, 255, 255, 0.60);
-  font-size: 15px;
-  cursor: pointer;
+  background: rgba(11, 16, 26, 0.90);
+  backdrop-filter: blur(10px);
+  display: flex;
+  padding: rem(24);
   position: relative;
   @include transition();
-
-  &::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    width: 4px;
-    height: 4px;
-    background-color: white;
-    bottom: -8px;
-    left: calc(50% - 2px);
-    opacity: 0;
-  }
-
-  &:hover {
-    color: white;
-
-    &::before {
-      opacity: 1;
-    }
-  }
 }
 
-.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.active {
-  color: white;
-
-  &::before {
-    opacity: 1;
+.scrolled {
+  .menu {
+    background-color: transparent;
   }
 }

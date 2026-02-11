@@ -1,4 +1,4 @@
-@import '@/assets/styles/abstracts/index.scss';
+@use "abstracts/index" as *;
 
 .section {
   margin-top: rem(15);

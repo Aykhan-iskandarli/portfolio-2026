@@ -1,4 +1,4 @@
-@import '@/assets/styles/abstracts/index.scss';
+@use "abstracts/index" as *;
 
 
 .title {
@@ -15,6 +15,7 @@
 
 .item {
   margin-bottom: rem(30);
+
   &:last-of-type {
     margin-bottom: rem(16);
   }
