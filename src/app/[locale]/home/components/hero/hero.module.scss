@@ -5,8 +5,10 @@
     background-position: center;
   height: auto;
   min-height: 100vh;
+  .heroContent{
+    padding-top: rem(100);
+  }
     .content{
-        margin-top: rem(100);
         .badge{
                   margin-bottom: rem(20);
             span{
@@ -42,6 +44,163 @@
             p{
                 color: rgb(221, 221, 221);
                 font-size: rem(25);
+            }
+        }
+    }
+    .aboutMe{
+        border:1px solid $main;
+        box-shadow: 0 0 10px $main;
+        border-radius: rem(12);
+        padding: rem(20);
+        .leftContent{
+            opacity: 0.3;
+        }
+        .name{
+            margin-bottom: rem(10);
+            color: $gray;
+            font-weight: 600;
+        }
+        .startDiv{
+            color: $neon-purple;
+            margin-bottom: rem(10);
+            span{
+                &:first-child{
+                    color: $text-lime;
+                }
+                &:last-child{
+                    color: $text-yellow ;
+                }
+            }
+        }
+        .startWebsite{
+            padding-left: rem(40);
+            color: $white ;
+            margin-bottom: rem(10);
+            span{
+                &:first-child{
+                    color: $text-blue;
+                     margin-right: rem(10);
+                }
+                 &:last-child{
+                    color: $white ;
+                }
+                   &:nth-child(3){
+                    color: $color-pink;
+                    margin:rem(0) rem(5);
+                 }
+            }
+        }
+        .idea{
+             padding-left: rem(70);
+             color: $white;
+             margin-bottom: rem(10);
+                 span{
+                &:first-child{
+                    color: $text-blue;
+                     margin-right: rem(10);
+                }
+                 &:nth-child(2){
+                    color: $white;
+                 }
+                 &:nth-child(3){
+                    color: $color-green;
+                 }
+            }
+        }
+        .tools{
+                 padding-left: rem(70);
+             color: $white;
+             margin-bottom: rem(10);
+                  span{
+                &:first-child{
+                    color: $text-blue;
+                     margin-right: rem(10);
+                }
+                 &:nth-child(2){
+                    color: $white;
+                 }
+                  &:nth-child(3){
+                    color: $color-green;
+                 }
+            }
+        }
+        .mission{
+                 padding-left: rem(70);
+             color: $white;
+             margin-bottom: rem(10);
+                  span{
+                &:first-child{
+                    color: $text-blue;
+                    margin-right: rem(10);
+                }
+                 &:nth-child(2){
+                    color: $white;
+                 }
+                     &:nth-child(3){
+                    color: $color-green;
+                 }
+            }
+        }
+        .build{
+                 padding-left: rem(70);
+             color: $white;
+             margin-bottom: rem(10);
+                  span{
+                &:first-child{
+                    color: $text-blue;
+                     margin-right: rem(10);
+                }
+                 &:nth-child(5){
+                    margin:rem(0) rem(5);
+                 }
+                 &:nth-child(5){
+                    color: $color-pink;
+                 }
+            }
+        }
+        .sign{
+            color: $text-yellow;
+        }
+ .allTools{
+                 padding-left: rem(70);
+             color: $white;
+             margin-bottom: rem(10);
+                  span{
+                &:first-child{
+                    color: $text-blue;
+                     margin-right: rem(10);
+                }
+                 &:nth-child(2){
+                    color: $white;
+                 }
+                  &:nth-child(4){
+                    color: $color-pink;
+                 }
+                   &:nth-child(6){
+                    color: $color-green;
+                    margin: rem(0) rem(10);
+                 }
+            }
+        }
+        .returns{
+              padding-left: rem(70);
+             color: $white;
+             margin-bottom: rem(10);
+                  span{
+                &:first-child{
+                    color: $text-blue;
+                     margin-right: rem(10);
+                }
+                 &:nth-child(2){
+                    color: $white;
+                 }
+                  &:nth-child(4){
+                    color: $color-pink;
+                 }
+                   &:nth-child(6){
+                    color: $color-green;
+                    margin: rem(0) rem(10);
+                 }
             }
         }
     }
