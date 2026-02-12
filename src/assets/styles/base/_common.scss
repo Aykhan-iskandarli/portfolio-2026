@@ -1,3 +1,4 @@
+@use "abstracts/index" as *;
 html {
   //overflow-y: auto;
   //font-size: 14px;
@@ -8,6 +9,7 @@ body {
   color: $common-text-color;
   background-color: $bg;
   font-feature-settings: 'ss03';
+  font-family: inter;
   // font-display: swap;
 }
 
@@ -150,7 +152,7 @@ img {
   }
 
   &:hover {
-    
+
     .input {
       border-color: #ffa39e !important;
     }
@@ -203,7 +205,7 @@ select:-webkit-autofill:focus {
       vertical-align: middle !important;
       unicode-bidi: isolate !important;
       border-color: inherit !important;
-  
+
      }
      td{
       border-color: #ccc !important;
@@ -303,4 +305,3 @@ select:-webkit-autofill:focus {
     border-spacing: revert;
   }
 }
-

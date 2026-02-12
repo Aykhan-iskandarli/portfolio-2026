@@ -5,7 +5,7 @@ import { Select } from 'antd';
 import { usePathname, useRouter, routing } from '@/i18n/routing';
 import { useLocale, useTranslations } from 'next-intl';
 const Test = () => {
- const pathname = usePathname();
+  const pathname = usePathname();
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations('Common');
@@ -17,16 +17,16 @@ const Test = () => {
   return (
     <div className={css.main}>
       <h2>Server Component:</h2>
-     <Select
-      defaultValue={locale}
-      style={{ width: 120 }}
-      onChange={handleChange}
-      options={routing.locales.map((loc) => ({
-        value: loc,
-        label: loc.toUpperCase(),
-      }))}
-    />
-<h1>{t('welcome')}</h1>
+      <Select
+        defaultValue={locale}
+        style={{ width: 120 }}
+        onChange={handleChange}
+        options={routing.locales.map((loc) => ({
+          value: loc,
+          label: loc.toUpperCase(),
+        }))}
+      />
+      <h1>{t('welcome')}</h1>
       <p>Cari dil: {t('lang')}</p>
     </div>
   );

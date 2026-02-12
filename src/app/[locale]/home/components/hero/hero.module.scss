@@ -1,0 +1,48 @@
+@use "abstracts/index" as *;
+.hero{
+        background-image: linear-gradient(rgba(16, 253, 254, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 253, 254, 0.1) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: center;
+  height: auto;
+  min-height: 100vh;
+    .content{
+        margin-top: rem(100);
+        .badge{
+                  margin-bottom: rem(20);
+            span{
+                display: inline-block;
+                text-transform: uppercase;
+                color: $main;
+                font-size: rem(18);
+                border: 0.5px solid $main;
+                border-radius: rem(22);
+                padding: rem(5) rem(20);
+            }
+        }
+        .title{
+            margin: rem(20) rem(0);
+            text-transform: uppercase;
+            font-size: rem(72);
+            font-weight: 800;
+            text-shadow: 0 0 10px #000000, 0 0 20px;
+            .text{
+                color: $white;
+                span{
+                    color: $main;
+                }
+                p{
+                    color: $neon-purple;
+                }
+            }
+        }
+        .desc{
+            margin-bottom: rem(20);
+        }
+        .desc{
+            p{
+                color: rgb(221, 221, 221);
+                font-size: rem(25);
+            }
+        }
+    }
+}

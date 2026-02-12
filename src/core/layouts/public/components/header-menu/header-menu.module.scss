@@ -1,18 +1,11 @@
 @use "abstracts/index" as *;
 
 .menu {
-  border-radius: $border-xl;
-  border: 1px solid rgba(255, 255, 255, 0.40);
-  background: rgba(11, 16, 26, 0.90);
-  backdrop-filter: blur(10px);
   display: flex;
-  padding: rem(24);
-  position: relative;
+  list-style-type: none;
   @include transition();
-}
 
-.scrolled {
-  .menu {
-    background-color: transparent;
-  }
 }
+ .contactBtn{
+    border-radius: rem(6) ;
+  }

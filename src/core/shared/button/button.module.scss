@@ -2,34 +2,41 @@
 
 .button {
   border-radius: $border-sm-2;
-  padding: rem(16) rem(32);
+  padding: rem(12) rem(32);
   font-weight: 500;
   outline: none;
   border: none;
   font-family: $font;
-  font-size: rem(16);
+  font-size: rem(20);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
+  text-transform: uppercase;
+  @include transition();
   @include breakpoint($md) {
     border-radius: $border-sm;
   }
 
   &_primary {
     color: $white;
-    background-color: $main;
+    background-color: color-mix(in oklab, $neon-purple 20%, transparent);
+    border:1px solid $neon-purple;
+
     transition: background-color 0.3s;
 
     &:hover {
-      background: var(--Modern-blue-600, #0043CE);
+      background: color-mix(in oklab, $neon-purple 50%, transparent);
     }
   }
 
   &_secondary {
+    background-color: transparent;
+    border: 1px solid $main;
     color: $main;
-    background-color: $white;
+      &:hover {
+      background: color-mix(in oklab, $main 20%, transparent);
+    }
   }
 
   &_gray {

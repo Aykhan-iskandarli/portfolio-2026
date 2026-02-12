@@ -8,7 +8,7 @@ const FooterComponent = () => {
 
   return (
     <footer className={css.footer}>
-      <div className='container-fluid'>;
+      <div className='container-fluid'>
         <div className='pb-24'>
           <div className={css.lower}>
             <div className='container'>

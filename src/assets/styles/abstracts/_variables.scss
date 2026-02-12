@@ -1,9 +1,12 @@
 //colors
 
-$main: #1570EF;
+$main: #10fdfe;
+$neon-purple: #d60af5;
 $common-text-color: #202939;
 $gray-text: #9AA4B2;
 $dark-text: #364152;
+$color-darker-space:'#0a0d15';
+$color-dark-space:'#0f131e';
 $white: #fff;
 $text: rgba(255, 255, 255, 0.5);
 $blue: #0F62FE;
@@ -36,7 +39,7 @@ $blue-gradient: radial-gradient(304.16% 141.42% at 0% 0%, #0043CE 0%, #002D9C 10
 
 //sizes
 $border-sm: 8px;
-$border-sm-2: 12px;
+$border-sm-2: 6px;
 $border: 16px;
 $border-md: 24px;
 $border-l: 32px;
@@ -53,3 +56,19 @@ $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
+
+
+
+    // --color-red-400: oklch(70.4% 0.191 22.216);
+    // --color-yellow-300: oklch(90.5% 0.182 98.111);
+    // --color-lime-300: oklch(89.7% 0.196 126.665);
+    // --color-green-400: oklch(79.2% 0.209 151.711);
+    // --color-blue-400: oklch(70.7% 0.165 254.624);
+    // --color-blue-500: oklch(62.3% 0.214 259.815);
+    // --color-blue-600: oklch(54.6% 0.245 262.881);
+    // --color-pink-400: oklch(71.8% 0.202 349.761);
+    // --color-gray-200: oklch(92.8% 0.006 264.531);
+    // --color-gray-300: oklch(87.2% 0.01 258.338);
+    // --color-gray-400: oklch(70.7% 0.022 261.325);
+    // --color-gray-500: oklch(55.1% 0.027 264.364);
+    // --color-gray-600: oklch(44.6% 0.03 256.802);

@@ -1,10 +1,11 @@
-import Test from "./test/page";
+import Home from '@/app/[locale]/home/page';
+import { Suspense } from 'react';
+import LoaderComponent from '@/core/shared/loader/loader.component';
 
-export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-    salam
-    <Test/>
-    </div>
-  );
-}
+const Page = () => {
+  return <Suspense fallback={<LoaderComponent/>}>
+    <Home/>
+  </Suspense>;
+};
+
+export default Page;
