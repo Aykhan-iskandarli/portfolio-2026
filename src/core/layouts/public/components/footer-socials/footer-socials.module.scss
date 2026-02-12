@@ -1,4 +1,4 @@
-@import '@/assets/styles/abstracts/index.scss';
+@use "abstracts/index" as *;
 
 .social {
   display: flex;
@@ -10,6 +10,7 @@
       position: relative !important;
       object-fit: contain !important;
     }
+
     @include breakpoint($lg) {
       margin: 0 20px;
     }

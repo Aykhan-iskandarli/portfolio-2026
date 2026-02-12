@@ -1,4 +1,4 @@
-@import '@/assets/styles/abstracts/index.scss';
+@use "abstracts/index" as *;
 
 .button {
   border-radius: $border-sm-2;
@@ -12,21 +12,26 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   @include breakpoint($md) {
     border-radius: $border-sm;
   }
+
   &_primary {
     color: $white;
     background-color: $main;
     transition: background-color 0.3s;
+
     &:hover {
-      background: var(--Modern-blue-600, #0043CE);    }
+      background: var(--Modern-blue-600, #0043CE);
+    }
   }
 
   &_secondary {
     color: $main;
     background-color: $white;
   }
+
   &_gray {
     color: $white;
     background-color: $gray;
@@ -35,6 +40,7 @@
 
 
   }
+
   &_dark {
     color: $white;
     background-color: $gray;
@@ -44,6 +50,7 @@
 
 
   }
+
   &_info {
     background-color: rgba(255, 255, 255, 0.20);
     color: $white;

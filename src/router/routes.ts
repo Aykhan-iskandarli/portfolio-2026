@@ -6,13 +6,8 @@ export enum Routes {
     home = '/',
     about = '/about',
     contact = '/contact',
-    corporate = '/corporate-environment',
-    documents = '/documents',
-    news = '/news',
     projects = '/projects',
-    successes = '/successes',
-    services = '/services',
-    vacancy = '/vacancy',
+
 }
 
 

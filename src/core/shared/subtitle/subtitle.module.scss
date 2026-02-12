@@ -1,4 +1,4 @@
-@import '@/assets/styles/abstracts/index.scss';
+@use "abstracts/index" as *;
 
 .wrapper {
   width: 100%;
@@ -6,11 +6,13 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: rem(48);
+
   @include breakpoint($lg) {
     margin-bottom: rem(32);
-    justify-content: flex-end!important;
-    margin-left: 0px!important;
+    justify-content: flex-end !important;
+    margin-left: 0px !important;
   }
+
   h3 {
     font-size: rem(20);
     font-style: normal;
@@ -20,15 +22,18 @@
     display: inline;
     color: $gray;
     width: calc(100% - 204px);
+
     @include breakpoint($lg) {
       width: calc(100% - 154px);
     }
+
     span {
       position: relative;
       background: radial-gradient(50% 50% at 50% 59.37%, #090909 0%, #616161 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
       &:before {
         content: "";
         display: inline-block;
@@ -38,6 +43,7 @@
         position: absolute;
         top: 50%;
         right: calc(100% + 1.5rem);
+
         @include breakpoint($lg) {
           width: 120px;
         }
