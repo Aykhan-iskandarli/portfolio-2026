@@ -2,10 +2,10 @@ import nextPlugin from '@next/eslint-plugin-next';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import prettierConfig from 'eslint-config-prettier'; // ƏLAVƏ
 
 export default [
   {
-    // Bütün müvafiq faylları hədəf alırıq
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     plugins: {
       '@next/next': nextPlugin,
@@ -23,12 +23,11 @@ export default [
       },
     },
     rules: {
-      // --- NEXT.JS VƏ REACT HOOKS STANDARTLARI ---
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
       ...reactHooksPlugin.configs.recommended.rules,
+      ...prettierConfig.rules, // ƏLAVƏ - ESLint/Prettier konfliktini həll edir
 
-      // --- SƏNİN KÖHNƏ QAYDALARIN ---
       'no-unreachable': 'error',
       'camelcase': ['error', { properties: 'never' }],
       'eqeqeq': 'error',
@@ -42,14 +41,13 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/ban-ts-comment': 'warn',
 
-      // --- "AQRESSİV" FORMATLAMA VƏ BOŞLUQ TƏMİZLƏMƏ ---
       'quotes': ['error', 'single', { avoidEscape: true }],
       'jsx-quotes': ['error', 'prefer-single'],
       'semi': ['error', 'always'],
-      'indent': ['error', 2, { SwitchCase: 1 }], // Bütün boşluq iyerarxiyasını 2-yə salır
-      'no-multi-spaces': ['error', { ignoreEOLComments: false }], // ARADAKI BOŞLUQLARI SİLİR
-      'no-trailing-spaces': 'error', // SƏTİR SONUNDAKI BOŞLUQLARI SİLİR
-      'object-curly-spacing': ['error', 'always'], // { user } formatı
+      'indent': ['error', 2, { SwitchCase: 1 }],
+      'no-multi-spaces': ['error', { ignoreEOLComments: false }],
+      'no-trailing-spaces': 'error',
+      'object-curly-spacing': ['error', 'always'],
       'array-bracket-spacing': ['error', 'never'],
       'comma-spacing': ['error', { before: false, after: true }],
       'key-spacing': ['error', { beforeColon: false, afterColon: true }],

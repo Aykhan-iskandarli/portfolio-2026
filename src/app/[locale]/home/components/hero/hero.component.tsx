@@ -1,6 +1,9 @@
 'use client';
 import ButtonComponent from '@/core/shared/button/button.component';
 import css from './hero.module.scss';
+import Image from 'next/image';
+import me from '@/assets/images/statics/me.png';
+import { bestSkill, IBestSkillProps } from './index';
 
 const HeroComponent = () => {
 
@@ -9,7 +12,7 @@ const HeroComponent = () => {
       <div className={css.heroContent}>
         <div className='container'>
           <div className='row'>
-            <div className='col-lg-6'>
+            <div className='col-sm-12 col-md-12 col-lg-6 '>
               <div className={css.content}>
                 <div className={css.badge}>
                   <span>Full Stack Developer
@@ -27,9 +30,25 @@ const HeroComponent = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-6'>
+            <div className='col-sm-12 col-md-12 col-lg-6 '>
               <div className={css.aboutMe}>
-                <div className={css.leftContent}>
+                <div className={css.bgNeon}></div>
+                <div className={css.profile}>
+                  <div className={css.picture}>
+                    <Image
+                      src={me}
+                      alt='Portfolio Logo'
+                      width={130}
+                      height={130}
+                      priority
+                    />
+                  </div>
+                  <div className={css.profileContent}>
+                    <p>Aykhan &nbsp;&nbsp; Iskandarli</p>
+                    <span>Senior Web Architect</span>
+                  </div>
+                </div>
+                <div className={css.rightContent}>
                   <div className={css.name}>
                     <p>{'<!-- Aykhan Iskandarli -->'}</p>
                   </div>
@@ -109,7 +128,15 @@ const HeroComponent = () => {
                   <div className={`${css.sign} ml-3`}>{'};'}</div>
                   <div className={`${css.startDiv} mt-4`}>{'</div>'}</div>
                 </div>
-
+                <div className={css.bestSkill}>
+                  <div className={css.content}>
+                    {
+                      bestSkill.map((item:IBestSkillProps)=>(
+                        <p key={item.id}>{item.name}</p>
+                      ))
+                    }
+                  </div>
+                </div>
               </div>
             </div>
           </div>

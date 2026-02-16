@@ -2,6 +2,7 @@
 html {
   //overflow-y: auto;
   //font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
 main {
   //background: $body;
 }
+
 
 section {
   margin-bottom: rem(24);
@@ -88,6 +90,17 @@ img {
 @include breakpoint($sm) {
   html {
     font-size: 13px;
+  }
+}
+@include breakpoint($sm) {
+  .row {
+    grid-template-columns: none !important;
+  }
+}
+
+@include breakpoint($md) {
+  .row {
+    grid-template-columns: none !important;
   }
 }
 

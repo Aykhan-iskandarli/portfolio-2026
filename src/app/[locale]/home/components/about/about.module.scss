@@ -1,0 +1,65 @@
+@use "abstracts/index" as *;
+
+.about {
+    .aboutLeft {
+     width: auto;
+        height: auto;
+        position: relative;
+        margin-right: rem(60);
+        img {
+       width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: rem(20);
+            border: 1px solid $main;
+            display: block;
+        }
+        .exp{
+            position: absolute;
+            top: rem(-43);
+            right: rem(-50);
+            display: flex;
+            justify-content: flex-end;
+            background-color: $dark-space;
+            .text{
+                border: 1px solid $neon-purple;
+                border-radius: rem(6);
+                padding: rem(15);
+                p{
+                    color:$main;
+                    font-size: rem(35);
+                    font-weight: 700;
+                }
+                span{
+                       color:$gray-200;
+                    font-size: rem(14);
+                }
+            }
+        }
+        .projects{
+                 position: absolute;
+            bottom: rem(-43);
+            left: rem(-50);
+            display: flex;
+            justify-content: flex-end;
+            background-color: $dark-space;
+               .text{
+                border: 1px solid $neon-purple;
+                border-radius: rem(6);
+                padding: rem(15);
+                p{
+                    color:$main;
+                    font-size: rem(35);
+                    font-weight: 700;
+                }
+                span{
+                       color:$gray-200;
+                    font-size: rem(14);
+                }
+            }
+        }
+    }
+    .rightHeader{
+        margin-bottom: rem(30);
+    }
+}

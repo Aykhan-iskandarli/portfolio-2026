@@ -1,0 +1,50 @@
+@use "abstracts/index" as *;
+
+.skillsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.skillName {
+  font-size: 1rem;
+  font-weight: 500;
+  color: $main;
+}
+
+.skillPercentage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: $neon-purple;
+}
+
+.progressBar {
+  width: 100%;
+  height: rem(8);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: rem(10);
+  overflow: hidden;
+  position: relative;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, $main 0%, $neon-purple 100%);
+   border-radius: rem(10);
+  transition: width 1s ease-in-out;
+  box-shadow: 0 0 10px rgba($main, 0.5);
+}
