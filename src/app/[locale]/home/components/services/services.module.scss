@@ -1,0 +1,44 @@
+@use "abstracts/index" as *;
+
+.services {
+
+
+
+        .servicesItem {
+            padding: rem(20);
+            border: 0.5px solid;
+            border-color: color-mix(in oklab, $main 30%, transparent);
+            border-radius: rem(6);
+
+            .servicesIcon {
+                margin: rem(10) 0;
+            }
+
+            .servicesTitle {
+                h4 {
+                    color: $main;
+                    font-size: rem(20);
+                    font-weight: 600;
+                }
+            }
+
+            .servicesDesc {
+                margin: rem(10) 0;
+                p {
+                    font-size: rem(16);
+                    color: $gray-200;
+                    line-height: rem(20);
+                }
+            }
+            .servicesItemList{
+                margin-top: rem(30);
+                p{
+                    color: $gray; 
+                    &:not(:last-child){
+                        margin-bottom: rem(15);
+                    }
+                }
+            }
+        }
+  
+}

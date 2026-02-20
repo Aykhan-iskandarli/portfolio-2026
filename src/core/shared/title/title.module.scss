@@ -12,6 +12,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-align: center;
   }
 
   .title {
@@ -19,6 +20,7 @@
       font-size: 3rem;
       font-weight: 800;
       color: #fff;
+      text-align: center;
 
       span {}
     }
@@ -64,12 +66,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin: rem(20) rem(0);
     &::before {
       content: '';
       width: 100px;
       height: rem(4);
       // background: $main;
+    }
+  }
+  .desc{
+    margin-top: rem(10);
+    p{
+      color:$gray-200;
+      text-align: center;
     }
   }
 }
